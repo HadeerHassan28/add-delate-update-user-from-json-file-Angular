@@ -1,0 +1,37 @@
+<div class="container">
+  <h1 class="text-danger text-center mt-3">Add New User</h1>
+  <!-- name -->
+  <div class="row w-50 m-auto">
+    <label class="fs-3">Name:</label>
+    <input class="fs-4" #name type="text" placeholder="Enter your name" />
+  </div>
+
+  <!-- address -->
+  <div class="row w-50 m-auto">
+    <label class="fs-3 mt-4"> Address:</label>
+    <input class="fs-4" #address type="text" placeholder="Address" />
+  </div>
+
+  <!-- Email -->
+  <div class="row w-50 m-auto">
+    <label class="fs-3 mt-4"><Address></Address>E-mail:</label>
+    <input class="fs-4" #email type="text" placeholder="Email" />
+  </div>
+
+  <!-- phone -->
+  <div class="row w-50 m-auto">
+    <label class="fs-3 mt-4"><Address></Address>Phone:</label>
+    <input class="fs-4" #phone type="text" placeholder="Phone" />
+  </div>
+
+  <!-- button -->
+  <div class="mt-4 d-flex justify-content-center">
+    <input
+      type="button"
+      value="ADD"
+      class="btn btn-outline-danger p-3 fs-3"
+      (click)="AddUser(name.value, address.value, email.value, phone.value)"
+      routerLink="/home"
+    />
+  </div>
+</div>

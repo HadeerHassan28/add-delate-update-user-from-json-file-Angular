@@ -1,0 +1,55 @@
+<h1 class="text-danger text-center mt-3">Information</h1>
+<!-- <app-user-item [oneUser]="u" *ngFor="let u of users"></app-user-item> -->
+<table class="table table-striped w-75 m-auto">
+  <thead class="text-center text-primary fs-4">
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">Name</th>
+      <th scope="col"></th>
+      <th scope="col"></th>
+      <th scope="col"></th>
+    </tr>
+  </thead>
+  <tbody class="text-center fs-5">
+    <tr *ngFor="let u of users">
+      <td>{{ u.id }}</td>
+      <td>{{ u.name }}</td>
+      <!-- Detalits -->
+      <td>
+        <input
+          type="button"
+          class="btn border-none fs-5"
+          value="Detalits"
+          [routerLinkActiveOptions]="{ exact: true }"
+          routerLinkActive="routerLinkActive"
+          routerLink="/users/{{ u.id }}"
+        />
+      </td>
+
+      <!-- Delete -->
+      <td>
+        <input
+          type="button"
+          value="Delete"
+          class="btn border-none fs-5"
+          [routerLinkActiveOptions]="{ exact: true }"
+          routerLinkActive="routerLinkActive"
+          routerLink="/home"
+          (click)="delate(u.id)"
+        />
+      </td>
+
+      <!-- update -->
+      <td>
+        <input
+          type="button"
+          value="Update"
+          class="btn border-none fs-5"
+          [routerLinkActiveOptions]="{ exact: true }"
+          routerLinkActive="routerLinkActive"
+          routerLink="/updateuser/{{ u.id }}"
+        />
+      </td>
+    </tr>
+  </tbody>
+</table>

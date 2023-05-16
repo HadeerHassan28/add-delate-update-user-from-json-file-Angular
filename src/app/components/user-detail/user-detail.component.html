@@ -1,0 +1,11 @@
+<h1 class="text-danger text-center mt-3">User Info</h1>
+<hr />
+<div *ngIf="userInfo; else falseBlock" class="text-center mt-4">
+  <p>Name: {{ userInfo.name }}</p>
+  <p>email: {{ userInfo.email }}</p>
+  <p>phone: {{ userInfo.phone }}</p>
+  <p>address: {{ userInfo.address }}</p>
+</div>
+<ng-template #falseBlock>
+  <h1>Loading.....</h1>
+</ng-template>
